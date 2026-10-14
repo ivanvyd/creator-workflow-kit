@@ -5,7 +5,7 @@ runs_dir = "runs"
 
 [elevenlabs]
 model_id = "eleven_multilingual_v2"
-# eleven_v4 accepts language_code="uk" when your chosen voice and account support it.
+# eleven_v4 accepts language_code="en" when your chosen voice and account support it.
 
 [azure_openai]
 writer_deployment_env = "AZURE_OPENAI_WRITER_DEPLOYMENT"

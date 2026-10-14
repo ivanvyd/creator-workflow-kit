@@ -43,8 +43,8 @@ In ElevenLabs, start with a library voice or create your own clone. Instant clon
 For the direct API commands below, set `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID` in your environment. Get the key and voice ID from your own ElevenLabs dashboard. Keep their values out of source files and Git history.
 
 ```powershell
-.\.venv\Scripts\python -m creator_kit prepare my-lesson --title "Tools and application code" --source examples\tool-calling-source.md --spoken-script examples\spoken-uk.txt
-.\.venv\Scripts\python -m creator_kit tts my-lesson --model eleven_v4 --language-code uk --approve-text
+.\.venv\Scripts\python -m creator_kit prepare my-lesson --title "Tools and application code" --source examples\tool-calling-source.md --spoken-script examples\spoken-en.txt
+.\.venv\Scripts\python -m creator_kit tts my-lesson --model eleven_v4 --language-code en --approve-text
 .\.venv\Scripts\python -m creator_kit render my-lesson
 .\.venv\Scripts\python -m creator_kit qc runs\my-lesson\demo.mp4
 ```
@@ -88,6 +88,6 @@ Source: [Google's installed-app OAuth guide](https://developers.google.com/youtu
 
 Keep local model environments separate from this kit's lightweight environment.
 
-- [Coqui TTS](https://github.com/idiap/coqui-ai-TTS) provides local voice tools. Its library code uses MPL-2.0; [XTTS-v2 weights](https://huggingface.co/coqui/XTTS-v2) use the separate Coqui Public Model License. Ukrainian is absent from that model's listed languages. Check the actual model's language and usage terms before choosing it.
+- [Coqui TTS](https://github.com/idiap/coqui-ai-TTS) provides local voice tools. Its library code uses MPL-2.0; [XTTS-v2 weights](https://huggingface.co/coqui/XTTS-v2) use the separate Coqui Public Model License. Check the actual model's supported languages and usage terms before choosing it.
 - [MuseTalk](https://github.com/TMElyralab/MuseTalk) changes mouth movement in recorded footage. Use your own source footage, compatible GPU environment and the upstream setup. Its dependency models have their own licenses, and its internet test footage is for noncommercial research. Weights and footage are not bundled here.
 - [LiveAvatar](https://docs.liveavatar.com/docs/lite-mode/overview) is separate from prerecorded HeyGen video. A Teams camera replacement requires an audio-to-avatar bridge plus video/audio routing and a latency test. This starter does not claim a tested Teams integration.

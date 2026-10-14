@@ -50,14 +50,14 @@ Run commands from any working directory after the editable install; repository a
 
 `config.example.toml` contains environment-variable names, never secret values. Copy it only if you need local settings. `bootstrap` never calls providers.
 
-- **ElevenLabs narration:** set `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID`; inspect `spoken-script.txt`, then pass `--approve-text`. The default is `eleven_multilingual_v2`; use `--model eleven_v4 --language-code uk` only when the selected account/voice supports that request. A matching successful manifest and audio file are reused. A failed request writes neither a success manifest nor audio.
+- **ElevenLabs narration:** set `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID`; inspect `spoken-script.txt`, then pass `--approve-text`. The default is `eleven_multilingual_v2`; use `--model eleven_v4 --language-code en` when the selected account/voice supports that request. A matching successful manifest and audio file are reused. A failed request writes neither a success manifest nor audio.
 - **Content drafts:** set `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_WRITER_DEPLOYMENT`, and `AZURE_OPENAI_REVIEWER_DEPLOYMENT`; supply a local source file and `--approve-model-call`. `config.toml` can bound input characters and output tokens and rename the non-secret deployment environment variables. The result is explicitly a draft and is never posted. The manifest records a source hash and environment-variable names, not credentials or prompt responses.
 - **YouTube:** supply your own OAuth client and a separate ignored token file. The only exposed scopes are `youtube.readonly` and `yt-analytics.readonly`; the report returns channel metadata plus a traffic-source summary. There are no upload, edit, or delete commands, and the kit does not promise impressions, CTR, or retention data.
 - **Avatar video:** connect HeyGen through its official remote MCP URL and browser OAuth. Confirm the selected account and generation quote, then give it your approved narration. HeyGen renders the avatar footage.
 
 See [mcp/catalog.json](mcp/catalog.json) and `python tools/emit_mcp_snippet.py` for snippets that you can add to your own Codex or Claude configuration. The helper never changes global settings.
 
-[The setup guide](docs/setup.md) walks through provider accounts, voice selection, MCP login, a narrated example, article/post drafts and YouTube access. [Included examples](examples) provide a neutral source and Ukrainian speaking text.
+[The setup guide](docs/setup.md) walks through provider accounts, voice selection, MCP login, a narrated example, article/post drafts and YouTube access. [Included examples](examples) provide a neutral source and English speaking text.
 
 ## MCP
 
@@ -85,13 +85,6 @@ The diagrams in [docs/diagrams](docs/diagrams) have editable Mermaid sources plu
 - [MCP boundary](docs/diagrams/mcp-boundary.mmd) / [SVG](docs/diagrams/mcp-boundary.svg)
 
 Technical QC validates the encoded file and full decode. It does not prove a human has watched the complete video at full speed with audio; the included demo is intentionally silent. Review visual flags and final copy before publishing.
-
-## Ukrainian quick start / Швидкий старт українською
-
-1. Запустіть `bootstrap.ps1` у Windows або `./bootstrap.sh` у macOS/Linux.
-2. Запустіть `python -m creator_kit demo` — це лише локальний, навмисно беззвучний ролик без ключів і списань.
-3. Перевірте `runs/hello-creator/demo.mp4` командою `qc` і перегляньте файл вручну.
-4. Лише після перевірки підключайте власний обліковий запис для озвучення, моделі, аватара або YouTube. Публікація завжди залишається окремим ручним рішенням.
 
 ## Development
 

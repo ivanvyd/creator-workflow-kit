@@ -1,0 +1,3 @@
+Let's take an example. A model can request a tool call. The application receives the arguments, checks permission, and runs the action. The result then returns to the model, which can use it in its response.
+
+The request itself does not mean the action succeeded. Check the operation's result before reporting that the work is complete.
