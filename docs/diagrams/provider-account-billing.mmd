@@ -1,0 +1,12 @@
+flowchart TD
+  A[Reviewed job] --> B{Choose action}
+  B --> C[ElevenLabs direct API]
+  B --> D[HeyGen remote MCP]
+  B --> E[Azure-compatible draft API]
+  C --> F[Select account and approve text]
+  D --> G[Browser OAuth and select account]
+  E --> H[Set own environment variables and approve source]
+  F --> I[Manifest after success]
+  G --> I
+  H --> I
+  I --> J[Manual review]

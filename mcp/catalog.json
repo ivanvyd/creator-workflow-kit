@@ -1,0 +1,27 @@
+{
+  "local": {
+    "transport": "stdio",
+    "command": "python",
+    "args": ["-m", "creator_kit", "mcp"],
+    "tools": ["doctor", "list_jobs", "inspect_job", "prepare_demo", "render"]
+  },
+  "remote": [
+    {
+      "name": "heygen",
+      "url": "https://mcp.heygen.com/mcp/v1/",
+      "auth": "browser OAuth",
+      "billing_boundary": "select the intended HeyGen account before requesting generation"
+    },
+    {
+      "name": "elevenlabs",
+      "url": "https://api.elevenlabs.io/v1/mcp",
+      "auth": "hosted OAuth",
+      "billing_boundary": "select the intended ElevenLabs account before any paid action"
+    },
+    {
+      "name": "openai-developer-docs",
+      "url": "https://developers.openai.com/mcp",
+      "auth": "provider-managed"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+flowchart LR
+  A[MCP client] --> B[Local stdio FastMCP]
+  B --> C[doctor]
+  B --> D[list and inspect jobs]
+  B --> E[prepare local demo]
+  B --> F[render local job]
+  A -. optional OAuth .-> G[HeyGen remote MCP]
+  A -. optional OAuth .-> H[ElevenLabs hosted MCP]
+  B -. no publish, upload, or delete tools .-> I[Manual decision]

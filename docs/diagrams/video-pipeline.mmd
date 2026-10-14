@@ -1,0 +1,10 @@
+flowchart LR
+  A[Verified source] --> B[Job: source and spoken script]
+  B --> C[Local HTML timeline]
+  C --> D[Playwright frame capture]
+  D --> E[FFmpeg MP4]
+  E --> F[Technical QC]
+  F --> G[Human visual review]
+  G --> H{Explicit provider decision}
+  H -->|No| I[Keep local cut]
+  H -->|Yes| J[Reviewed narration or avatar request]

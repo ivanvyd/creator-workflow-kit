@@ -1,0 +1,11 @@
+flowchart LR
+  A[Supplied source] --> B[Deterministic local draft]
+  A --> C[Optional approved model draft]
+  B --> D[Editor review]
+  C --> D
+  D --> E[Approved copy]
+  E --> F{User chooses publication}
+  F -->|Manual| G[Publisher outside this kit]
+  F -->|Autonomous request| H[Design a separate authorized workflow]
+  G --> I[Read-only feedback report]
+  I --> D

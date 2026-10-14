@@ -1,0 +1,18 @@
+# Copy to config.toml only if you want to change defaults. Values are never copied from here
+# into a provider request without an explicit command and approval flag.
+[paths]
+runs_dir = "runs"
+
+[elevenlabs]
+model_id = "eleven_multilingual_v2"
+# eleven_v4 accepts language_code="uk" when your chosen voice and account support it.
+
+[azure_openai]
+writer_deployment_env = "AZURE_OPENAI_WRITER_DEPLOYMENT"
+reviewer_deployment_env = "AZURE_OPENAI_REVIEWER_DEPLOYMENT"
+max_input_characters = 24000
+max_output_tokens = 800
+
+# Direct provider credentials always use these environment variable names:
+# ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY
+# The deployment environment variable names above are configurable because they are not secrets.
