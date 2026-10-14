@@ -1,6 +1,6 @@
 ---
 name: stop-slop
-description: Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.
+description: Edit prose for concrete, natural writing while preserving facts, uncertainty, citations, and the author's voice. Use for posts, scripts, articles, setup guides, and messages drafted for an audience.
 metadata:
   trigger: Writing prose, editing drafts, reviewing content for AI patterns
   author: Hardik Pandya (https://hvpandya.com)
@@ -8,54 +8,18 @@ metadata:
 
 # Stop Slop
 
-Eliminate predictable AI writing patterns from prose.
+Make the writing useful, specific, and natural for its reader. Preserve the author's meaning and the evidence behind each claim.
 
-## Core Rules
+Remove throat-clearing, generic praise, inflated significance, stock contrasts, redundant summaries, and empty abstractions. Prefer concrete subjects and verbs. Vary sentence length when the draft sounds mechanical. Use the format and register the audience needs.
 
-1. **Cut filler phrases.** Remove throat-clearing openers, emphasis crutches, and all adverbs. See [references/phrases.md](references/phrases.md).
-2. **Break formulaic structures.** Avoid binary contrasts, negative listings, dramatic fragmentation, rhetorical setups, false agency. See [references/structures.md](references/structures.md).
-3. **Use active voice.** Every sentence needs a human subject doing something. No passive constructions. No inanimate objects performing human actions ("the complaint becomes a fix").
-4. **Be specific.** No vague declaratives ("The reasons are structural"). Name the specific thing. No lazy extremes ("every," "always," "never") doing vague work.
-5. **Put the reader in the room.** No narrator-from-a-distance voice. "You" beats "People." Specifics beat abstractions.
-6. **Vary rhythm.** Mix sentence lengths. Two items beat three. End paragraphs differently. No em dashes.
-7. **Trust readers.** State facts directly. Skip softening, justification, hand-holding.
-8. **Cut quotables.** If it sounds like a pull-quote, rewrite it.
+Treat the patterns in [phrases](references/phrases.md), [structures](references/structures.md), and [examples](references/examples.md) as editing leads, not grammar bans. Read the reference needed for the draft. An adverb, passive sentence, em dash, three-item list, or memorable sentence can be the clearest choice. Do not distort correct prose to satisfy a score.
 
-## Quick Checks
+Retain exact identifiers, code, quotations, links, and technical terms. Keep qualifications that reflect real uncertainty. Never invent an actor to eliminate passive voice, strengthen evidence, add metrics, or manufacture personal experience. Preserve the user's phrases that carry their voice.
 
-Before delivering prose:
+Deliver the edited prose in the requested form. Explain changes when useful. Do not append self-ratings or claims to beat AI detectors. Drafting does not authorize posting.
 
-- Any adverbs? Kill them.
-- Any passive voice? Find the actor, make them the subject.
-- Inanimate thing doing a human verb ("the decision emerges")? Name the person.
-- Sentence starts with a Wh- word? Restructure it.
-- Any "here's what/this/that" throat-clearing? Cut to the point.
-- Any "not X, it's Y" contrasts? State Y directly.
-- Three consecutive sentences match length? Break one.
-- Paragraph ends with punchy one-liner? Vary it.
-- Em-dash anywhere? Remove.
-- Vague declarative ("The implications are significant")? Name the specific implication.
-- Narrator-from-a-distance ("Nobody designed this")? Put the reader in the scene.
-- Meta-joiners ("The rest of this essay...")? Delete. Let the essay move.
+Internal technical notes, PRs, wiki pages, and code comments follow their own conventions. Apply this prose pass when the user requests it.
 
-## Scoring
+## Provenance
 
-Rate 1-10 on each dimension:
-
-| Dimension | Question |
-|-----------|----------|
-| Directness | Statements or announcements? |
-| Rhythm | Varied or metronomic? |
-| Trust | Respects reader intelligence? |
-| Authenticity | Sounds human? |
-| Density | Anything cuttable? |
-
-Below 35/50: revise.
-
-## Examples
-
-See [references/examples.md](references/examples.md) for before/after transformations.
-
-## License
-
-MIT
+This portable adaptation follows Ivan's shared writing guidance. It is derived from Hardik Pandya's MIT-licensed Stop Slop; the original license and supporting references are retained. See [PROVENANCE.md](PROVENANCE.md).
