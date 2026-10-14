@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="node_modules/gsap/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #09111f;
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .clip { position: absolute; }
+      .halo {
+        width: 560px;
+        height: 560px;
+        left: 680px;
+        top: 250px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #4cb8ff 0%, #2451a2 34%, transparent 70%);
+        filter: blur(5px);
+        opacity: 0;
+      }
+      .eyebrow {
+        left: 170px;
+        top: 210px;
+        color: #93d9ff;
+        font-size: 28px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        opacity: 0;
+      }
+      #title {
+        left: 160px;
+        top: 300px;
+        width: 1050px;
+        color: #f8fbff;
+        font-size: 132px;
+        line-height: .94;
+        font-weight: 650;
+        letter-spacing: -.06em;
+        opacity: 0;
+      }
+      .rule {
+        left: 170px;
+        top: 640px;
+        width: 720px;
+        height: 10px;
+        background: #7be0ff;
+      }
+      .caption {
+        left: 174px;
+        top: 690px;
+        color: #c0d0e9;
+        font-size: 34px;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="4"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="motion-halo" class="halo clip" data-start="0" data-duration="4" data-track-index="0"></div>
+      <p id="motion-eyebrow" class="eyebrow clip" data-start="0" data-duration="4" data-track-index="1">Local motion example</p>
+      <h1 id="title" class="clip" data-start="0" data-duration="4" data-track-index="2">A small idea<br />can move.</h1>
+      <div id="motion-rule" class="rule clip" data-start="0" data-duration="4" data-track-index="3"></div>
+      <p id="motion-caption" class="caption clip" data-start="0" data-duration="4" data-track-index="4">AI drafts the scene. Your local renderer makes the MP4.</p>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to(".halo", { opacity: 0.85, scale: 1.12, duration: 0.8, ease: "power2.out" }, 0)
+        .fromTo(".eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.2)
+        .fromTo("#title", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.35)
+        .fromTo(".rule", { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 0.85)
+        .fromTo(".caption", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 1.2)
+        .to("#root", { opacity: 0, duration: 0.45, ease: "power1.in" }, 3.55);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

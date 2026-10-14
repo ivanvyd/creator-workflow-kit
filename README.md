@@ -4,6 +4,10 @@ Create short videos, voice narration and article/post drafts with the workflows 
 
 The article/post generator is a portable starter. The full CompileTheory application remains private.
 
+## AI-assisted local animation
+
+[The animation guide](docs/animations.md) includes a neutral, runnable HyperFrames example. An AI can draft the HTML scene; the pinned project-local HyperFrames CLI and FFmpeg render and inspect the MP4.
+
 ## First run
 
 Install [Python 3.11 or newer](https://www.python.org/downloads/) and [FFmpeg](https://ffmpeg.org/download.html), with `ffmpeg` and `ffprobe` on PATH. Bootstrap installs the Python packages and Chromium once, so it needs network access.

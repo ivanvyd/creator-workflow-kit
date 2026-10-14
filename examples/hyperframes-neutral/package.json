@@ -1,0 +1,14 @@
+{
+  "name": "hyperframes-neutral",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "hyperframes check . --strict",
+    "render": "hyperframes render . -o renders/neutral-motion.mp4 --fps 30 --quality standard --workers 1 --no-browser-gpu --no-best-effort --strict",
+    "qc": "ffprobe -v error -count_frames -show_entries stream=codec_name,pix_fmt,width,height,r_frame_rate,nb_read_frames,field_order -show_entries format=duration -of json renders/neutral-motion.mp4"
+  },
+  "devDependencies": {
+    "gsap": "3.14.2",
+    "hyperframes": "0.8.155"
+  }
+}
